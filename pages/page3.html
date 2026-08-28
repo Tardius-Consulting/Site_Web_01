@@ -1,11 +1,258 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Planos</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 20px;
+        }
+
+        h1{
+            padding-bottom: 20px;
+            padding-top: 50px;
+        }
+
+        table#planos{
+            width: 100%;
+            border-spacing: 10px;
+        }
+
+
+        div.plano{
+            border: 1px solid black;
+            border-radius: 15px;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        div.plano h1{
+            font-size: 1.5rem;
+            padding-bottom: 15px;
+        }
+
+        div.plano h2{
+            font-size: 1.8rem;
+            display: inline-block;
+        }
+
+        div.plano p{
+            font-size: 0.9rem;
+            padding-bottom: 30px;
+        }
+
+        div.plano p.tempo{
+            padding-bottom: 30px;
+            display: inline-block;
+        }
+
+        div.plano a{
+            border: 3px solid black;
+            border-radius: 30px;
+            padding: 15px 60px;
+            font-size: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+        
+        div.plano a:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        div.plano ul{
+            list-style-type: none;
+            padding-top: 30px;
+        }
+
+        div.plano li::before{
+            content: "✔️ ";
+        }
+
+        div#comparacaodeplanos{
+            border: 1px solid black;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        table#comparacao{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        table#comparacao td, th{
+            border: 1px solid black;
+        }
+
+        table#comparacao th{
+            padding-left: 20px;
+            padding-bottom: 15px;
+        }
+
+        table#comparacao td{
+            text-align: center;
+            padding: 15px 0px 15px 15px;
+        }
+
+        table#comparacao td.topico{
+            text-align: left;
+        }
+
+        table#comparacao h1{
+            font-size: 1.5rem;
+            padding-bottom: 10px;
+            padding-top: 20px;
+        }
+
+        table#comparacao h2{
+            font-size: 1.8rem;
+            display: inline-block;
+        }
+
+        table#comparacao p{
+            font-size: 0.9rem;
+            padding-bottom: 30px;
+        }
+
+        table#comparacao p.tempo{
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        table#comparacao a{
+            border: 3px solid black;
+            border-radius: 30px;
+            padding: 6px 40px;
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+        }
+
+        table#comparacao a:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h1>Planos</h1>
+    <table id="planos">
+        <tr>
+            <td>
+                <div class="plano">
+                    <h1>Gratuito</h1>
+                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
+                    <h2>R$ 0,00</h2>
+                    <p class="tempo">/mês</p><br>
+                    <a href="#">Obter o plano Gratuito</a>
+                    <ul>
+                        <li>sei lá 1.0</li>
+                        <li>sei lá 2.0</li>
+                        <li>sei lá 3.0</li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="plano">
+                    <h1>Plano X</h1>
+                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
+                    <h2>R$ 0,00</h2>
+                    <p class="tempo">/mês</p><br>
+                    <a href="#">Comprar o plano X</a>
+                    <ul>
+                        <li>sei lá 1.0</li>
+                        <li>sei lá 2.0</li>
+                        <li>sei lá 3.0</li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="plano">
+                    <h1>Plano Y</h1>
+                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
+                    <h2>R$ 0,00</h2>
+                    <p class="tempo">/mês</p><br>
+                    <a href="#">Comprar o plano Y</a>
+                    <ul>
+                        <li>sei lá 1.0</li>
+                        <li>sei lá 2.0</li>
+                        <li>sei lá 3.0</li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <div class="plano">
+                    <h1>Plano Z</h1>
+                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
+                    <h2>R$ 0,00</h2>
+                    <p class="tempo">/mês</p><br>
+                    <a href="#">Comprar o plano Z</a>
+                    <ul>
+                        <li>sei lá 1.0</li>
+                        <li>sei lá 2.0</li>
+                        <li>sei lá 3.0</li>
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <h1>Comparação de Planos</h1>
+    <div id="comparacaodeplanos">
+        <table id="comparacao">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>
+                        <h1>Gratuito</h1>
+                        <h2>R$ 0,00</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Obter o plano Gratuito</a>
+                    </th>
+                    <th>
+                        <h1>Gratuito</h1>
+                        <h2>R$ 0,00</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Obter o plano Gratuito</a>
+                    </th>
+                    <th>
+                        <h1>Gratuito</h1>
+                        <h2>R$ 0,00</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Obter o plano Gratuito</a>
+                    </th>
+                    <th>
+                        <h1>Gratuito</h1>
+                        <h2>R$ 0,00</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Obter o plano Gratuito</a>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="topico">Coisa x que não sei e talvez precise saber</td>
+                    <td>&#x2705</td>
+                    <td>&#x274C</td>
+                    <td>&#x274C</td>
+                    <td>&#x274C</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
