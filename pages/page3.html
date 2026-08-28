@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check,close" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
         *{
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         }
 
+        :root{
+            --Azul-Tardius: #120d52;
+            --Branco: #ffffff;
+            --Laranja-Tardius: #f18a36;
+            --Laranja-Destaque: #af5b16;
+            --Cinza-Tardius: #333333;
+            --Azul-Destaque: #e0f7fa;
+            --Titulo-Tardius: "Poppins", sans-serif;
+            --Corpo-Tardius: "Lato", sans-serif;
+        }
+
         body{
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: var(--Corpo-Tardius);
             padding: 0px 20px;
         }
 
-        h1{
+        body > h1{
+            font-family: var(--Titulo-Tardius);
             padding-bottom: 20px;
             padding-top: 50px;
         }
@@ -26,48 +44,47 @@
             border-spacing: 10px;
         }
 
-
         div.plano{
-            border: 1px solid black;
-            border-radius: 15px;
-            padding: 20px;
             display: inline-block;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 15px;
         }
 
-        div.plano h1{
+        div.plano h1, table#comparacao h1{
             font-size: 1.5rem;
             padding-bottom: 15px;
         }
 
-        div.plano h2{
-            font-size: 1.8rem;
+        div.plano h2, table#comparacao h2{
             display: inline-block;
+            font-size: 1.8rem;
         }
 
-        div.plano p{
+        div.plano p, table#comparacao p{
             font-size: 0.9rem;
             padding-bottom: 30px;
         }
 
-        div.plano p.tempo{
-            padding-bottom: 30px;
+        div.plano p.tempo, table#comparacao p.tempo{
             display: inline-block;
+            padding-bottom: 30px;
         }
 
-        div.plano a{
-            border: 3px solid black;
-            border-radius: 30px;
-            padding: 15px 60px;
+        div.plano a, table#comparacao a{
             font-size: 1rem;
+            color: black;
+            background-color: var(--Laranja-Tardius);
+            padding: 15px 60px;
             text-align: center;
             text-decoration: none;
-            color: black;
+            border: 3px solid black;
+            border-radius: 30px;
+            transition: background-color 0.5s;
         }
         
-        div.plano a:hover{
-            background-color: black;
-            color: white;
-            cursor: pointer;
+        div.plano a:hover, table#comparacao a:hover{
+            background-color: var(--Laranja-Destaque);
         }
 
         div.plano ul{
@@ -76,14 +93,23 @@
         }
 
         div.plano li::before{
-            content: "✔️ ";
+            content: "\e5ca ";
+            display: inline-block;
+            font-family: 'Material Symbols Outlined';
+            font-size: 30px;
+            font-variation-settings: 'FILL' 1, 'wght' 1000;
+            color: var(--Laranja-Tardius);
+            -webkit-text-stroke: 1px black;
+            transform: translate(-3px, 8px);
         }
 
         div#comparacaodeplanos{
-            border: 1px solid black;
-            border-radius: 20px;
-            overflow: hidden;
+            margin: auto;
             margin-bottom: 20px;
+            width: 98%;
+            border: 2px solid black;
+            border-radius: 15px;
+            overflow: hidden;
         }
 
         table#comparacao{
@@ -110,41 +136,38 @@
             text-align: left;
         }
 
+        table#comparacao td.possui::before{
+            content: "\e5ca";
+            display: inline-block;
+            font-family: 'Material Symbols Outlined';
+            font-size: 30px;
+            font-variation-settings: 'FILL' 1, 'wght' 1000;
+            color: var(--Laranja-Tardius);
+            -webkit-text-stroke: 1px black;
+        }
+
+        table#comparacao td.naopossui::before{
+            content: "\e5cd";
+            display: inline-block;
+            font-family: 'Material Symbols Outlined';
+            font-size: 30px;
+            font-variation-settings: 'FILL' 1, 'wght' 1000;
+            color: var(--Azul-Tardius);
+            -webkit-text-stroke: 1px black;
+        }
+
         table#comparacao h1{
-            font-size: 1.5rem;
             padding-bottom: 10px;
             padding-top: 20px;
         }
 
-        table#comparacao h2{
-            font-size: 1.8rem;
-            display: inline-block;
-        }
-
-        table#comparacao p{
-            font-size: 0.9rem;
-            padding-bottom: 30px;
-        }
-
         table#comparacao p.tempo{
             padding-bottom: 15px;
-            display: inline-block;
         }
         
         table#comparacao a{
-            border: 3px solid black;
-            border-radius: 30px;
             padding: 6px 40px;
             font-size: 0.9rem;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-        }
-
-        table#comparacao a:hover{
-            background-color: black;
-            color: white;
-            cursor: pointer;
         }
 
     </style>
@@ -224,32 +247,32 @@
                         <a href="#">Obter o plano Gratuito</a>
                     </th>
                     <th>
-                        <h1>Gratuito</h1>
+                        <h1>Plano X</h1>
                         <h2>R$ 0,00</h2>
                         <p class="tempo">/mês</p><br>
-                        <a href="#">Obter o plano Gratuito</a>
+                        <a href="#">Comprar o plano X</a>
                     </th>
                     <th>
-                        <h1>Gratuito</h1>
+                        <h1>Plano Y</h1>
                         <h2>R$ 0,00</h2>
                         <p class="tempo">/mês</p><br>
-                        <a href="#">Obter o plano Gratuito</a>
+                        <a href="#">Comprar o plano Y</a>
                     </th>
                     <th>
-                        <h1>Gratuito</h1>
+                        <h1>Plano Z</h1>
                         <h2>R$ 0,00</h2>
                         <p class="tempo">/mês</p><br>
-                        <a href="#">Obter o plano Gratuito</a>
+                        <a href="#">Comprar o plano Z</a>
                     </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td class="topico">Coisa x que não sei e talvez precise saber</td>
-                    <td>&#x2705</td>
-                    <td>&#x274C</td>
-                    <td>&#x274C</td>
-                    <td>&#x274C</td>
+                    <td class="possui"></td>
+                    <td class="naopossui"></td>
+                    <td class="possui"></td>
+                    <td class="naopossui"></td>
                 </tr>
             </tbody>
         </table>
