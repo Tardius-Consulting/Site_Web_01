@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Planos</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check,close" />
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
         *{
             margin: 0px;
             padding: 0px;
@@ -24,27 +18,31 @@
             --Laranja-Destaque: #af5b16;
             --Cinza-Tardius: #333333;
             --Azul-Destaque: #e0f7fa;
-            --Titulo-Tardius: "Poppins", sans-serif;
-            --Corpo-Tardius: "Lato", sans-serif;
         }
 
-        body{
-            font-family: var(--Corpo-Tardius);
+        html, body{
             padding: 0px 20px;
         }
 
-        body > h1{
-            font-family: var(--Titulo-Tardius);
-            padding-bottom: 20px;
-            padding-top: 50px;
+        body > div{
+            width: 1300px;
+            margin: auto;
         }
 
-        table#planos{
-            width: 100%;
+        body > div > h1{
+            padding: 50px 0px 20px 0px;
+        }
+
+        body > div > table{
+            width: 1300px;
+            height: 350px;
+            margin: auto;
             border-spacing: 10px;
         }
 
-        div.plano{
+        body > div > table div{
+            height: 100%;
+            width: 425px;
             display: inline-block;
             padding: 20px;
             border: 2px solid black;
@@ -52,31 +50,31 @@
             box-shadow: 0 5px 15px rgba(0,0,0,.08);
         }
 
-        div.plano h1, table#comparacao h1{
+        body > div > table div h1, body > div > div > table h1{
             font-size: 1.5rem;
             padding-bottom: 15px;
         }
 
-        div.plano h2, table#comparacao h2{
+        body > div > table div h2, body > div > div > table h2{
             display: inline-block;
             font-size: 1.8rem;
         }
 
-        div.plano p, table#comparacao p{
+        body > div > table div p, body > div > div > table p{
             font-size: 0.9rem;
             padding-bottom: 30px;
         }
 
-        div.plano p.tempo, table#comparacao p.tempo{
+        body > div > table div p.tempo, body > div > div > table p{
             display: inline-block;
-            padding-bottom: 30px;
         }
 
-        div.plano a, table#comparacao a{
+        body > div > table div a, body > div > div > table a{
+            display: block;
             font-size: 1rem;
             color: black;
             background-color: var(--Laranja-Tardius);
-            padding: 15px 60px;
+            padding: 15px 0px;
             text-align: center;
             text-decoration: none;
             border: 3px solid black;
@@ -84,214 +82,177 @@
             transition: background-color 0.5s;
         }
         
-        div.plano a:hover, table#comparacao a:hover{
+        body > div > table div a:hover, body > div > div > table a:hover{
             background-color: var(--Laranja-Destaque);
         }
 
-        div.plano ul{
+        body > div > table div ul{
             list-style-type: none;
-            padding-top: 30px;
+            padding-top: 20px;
         }
 
-        div.plano li::before{
-            content: "\e5ca ";
-            display: inline-block;
-            font-family: 'Material Symbols Outlined';
-            font-size: 30px;
-            font-variation-settings: 'FILL' 1, 'wght' 1000;
-            color: var(--Laranja-Tardius);
-            -webkit-text-stroke: 1px black;
-            transform: translate(-3px, 8px);
+        body > div > table div li::before{
+            content: "✔️ ";
+            font-size: 20px;
         }
 
-        div#comparacaodeplanos{
+
+
+
+
+
+
+
+
+        body > div > div{
             margin: auto;
             margin-bottom: 20px;
-            width: 98%;
+            width: 1300px;
             border: 2px solid black;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,.08);
         }
 
-        table#comparacao{
+        body > div > div > table{
             width: 100%;
             border-collapse: collapse;
             text-align: left;
         }
 
-        table#comparacao td, th{
+        body > div > div > table td, th{
             border: 1px solid black;
         }
 
-        table#comparacao th{
-            padding-left: 20px;
+        body > div > div > table th{
+            padding: 0px 20px;
             padding-bottom: 15px;
         }
 
-        table#comparacao td{
+        body > div > div > table td{
             text-align: center;
             padding: 15px 0px 15px 15px;
         }
 
-        table#comparacao td.topico{
-            text-align: left;
-        }
-
-        table#comparacao td.possui::before{
-            content: "\e5ca";
-            display: inline-block;
-            font-family: 'Material Symbols Outlined';
-            font-size: 30px;
-            font-variation-settings: 'FILL' 1, 'wght' 1000;
-            color: var(--Laranja-Tardius);
-            -webkit-text-stroke: 1px black;
-        }
-
-        table#comparacao td.naopossui::before{
-            content: "\e5cd";
-            display: inline-block;
-            font-family: 'Material Symbols Outlined';
-            font-size: 30px;
-            font-variation-settings: 'FILL' 1, 'wght' 1000;
-            color: var(--Azul-Tardius);
-            -webkit-text-stroke: 1px black;
-        }
-
-        table#comparacao h1{
+        body > div > div > table h1{
             padding-bottom: 10px;
             padding-top: 20px;
         }
-
-        table#comparacao p.tempo{
-            padding-bottom: 15px;
-        }
         
-        table#comparacao a{
-            padding: 6px 40px;
+        body > div > div > table a{
+            padding: 6px 0px;
             font-size: 0.9rem;
+        }
+
+        body > div > div > table td{
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        body > div > div > table p{
+            padding-bottom: 15px;
         }
 
     </style>
 </head>
 <body>
-    <h1>Planos</h1>
-    <table id="planos">
-        <tr>
-            <td>
-                <div class="plano">
-                    <h1>Gratuito</h1>
-                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
-                    <h2>R$ 0,00</h2>
-                    <p class="tempo">/mês</p><br>
-                    <a href="#">Obter o plano Gratuito</a>
-                    <ul>
-                        <li>sei lá 1.0</li>
-                        <li>sei lá 2.0</li>
-                        <li>sei lá 3.0</li>
-                    </ul>
-                </div>
-            </td>
-            <td>
-                <div class="plano">
-                    <h1>Plano X</h1>
-                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
-                    <h2>R$ 0,00</h2>
-                    <p class="tempo">/mês</p><br>
-                    <a href="#">Comprar o plano X</a>
-                    <ul>
-                        <li>sei lá 1.0</li>
-                        <li>sei lá 2.0</li>
-                        <li>sei lá 3.0</li>
-                    </ul>
-                </div>
-            </td>
-            <td>
-                <div class="plano">
-                    <h1>Plano Y</h1>
-                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
-                    <h2>R$ 0,00</h2>
-                    <p class="tempo">/mês</p><br>
-                    <a href="#">Comprar o plano Y</a>
-                    <ul>
-                        <li>sei lá 1.0</li>
-                        <li>sei lá 2.0</li>
-                        <li>sei lá 3.0</li>
-                    </ul>
-                </div>
-            </td>
-            <td>
-                <div class="plano">
-                    <h1>Plano Z</h1>
-                    <p class="descricao">Lorem ipsum dolor sit amet oluta non praesentium. Aspernatur neque tempore laborum?</p>
-                    <h2>R$ 0,00</h2>
-                    <p class="tempo">/mês</p><br>
-                    <a href="#">Comprar o plano Z</a>
-                    <ul>
-                        <li>sei lá 1.0</li>
-                        <li>sei lá 2.0</li>
-                        <li>sei lá 3.0</li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-    </table>
-    <h1>Comparação de Planos</h1>
-    <div id="comparacaodeplanos">
-        <table id="comparacao">
-            <thead>
+    <div>
+        <h1>Planos</h1>
+        <table id="planos">
+            <tr>
+                <td>
+                    <div class="plano">
+                        <h1>Plano FREE</h1>
+                        <p class="descricao">Desenvolvedores iniciantes testando o sistema ou organizando seu primeiro projeto.</p>
+                        <h2>R$ 0,00</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Começar Grátis</a>
+                        <ul>
+                            <li>Limite de 1 projeto ativo.</li>
+                            <li>Automação manual via scripts de texto (criação automática de cards a partir do seu texto ou de IAs externas).</li>
+                            <li>Exibição de anúncios discretos durante a navegação.</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="plano">
+                        <h1>Plano INDIE</h1>
+                        <p class="descricao">Desenvolvedores que criam múltiplos jogos e querem uma experiência fluida.</p>
+                        <h2>R$ 14,99</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Assinar Plano Indie</a>
+                        <ul>
+                            <li>Tudo do Plano Free +</li>
+                            <li>Projetos ilimitados.</li>
+                            <li>Navegação 100% livre de anúncios.</li>
+                        </ul>
+                    </div>
+                </td>
+                <td>
+                    <div class="plano">
+                        <h1>Plano PRO</h1>
+                        <p class="descricao">Devs que querem automatizar ao máximo o processo de documentação e criação de tarefas.</p>
+                        <h2>R$ 29,99</h2>
+                        <p class="tempo">/mês</p><br>
+                        <a href="#">Assinar Plano Pro</a>
+                        <ul>
+                            <li>Tudo do Plano Indie +</li>
+                            <li>IA do Lotl Integrada: Geração automática da própria documentação e dos documentos base para criação dos cards via inteligência artificial interna do sistema.</li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <h1>Comparação de Planos</h1>
+        <div>
+            <table>
                 <tr>
                     <th></th>
                     <th>
-                        <h1>Gratuito</h1>
+                        <h1>Plano FREE</h1>
                         <h2>R$ 0,00</h2>
-                        <p class="tempo">/mês</p><br>
-                        <a href="#">Obter o plano Gratuito</a>
+                        <p>/mês</p><br>
+                        <a href="#">Começar Grátis</a>
                     </th>
                     <th>
-                        <h1>Plano X</h1>
-                        <h2>R$ 0,00</h2>
-                        <p class="tempo">/mês</p><br>
-                        <a href="#">Comprar o plano X</a>
+                        <h1>Plano INDIE</h1>
+                        <h2>R$ 14,99</h2>
+                        <p>/mês</p><br>
+                        <a href="#">Assinar Plano Indie</a>
                     </th>
                     <th>
-                        <h1>Plano Y</h1>
-                        <h2>R$ 0,00</h2>
-                        <p class="tempo">/mês</p><br>
-                        <a href="#">Comprar o plano Y</a>
-                    </th>
-                    <th>
-                        <h1>Plano Z</h1>
-                        <h2>R$ 0,00</h2>
-                        <p class="tempo">/mês</p><br>
-                        <a href="#">Comprar o plano Z</a>
+                        <h1>Plano PRO</h1>
+                        <h2>R$ 29,99</h2>
+                        <p>/mês</p><br>
+                        <a href="#">Assinar Plano PRO</a>
                     </th>
                 </tr>
-            </thead>
-            <tbody>
                 <tr>
-                    <td class="topico">Coisa x que não sei e talvez precise saber</td>
-                    <td class="possui"></td>
-                    <td class="naopossui"></td>
-                    <td class="possui"></td>
-                    <td class="naopossui"></td>
+                    <td>Projetos</td>
+                    <td>Somente 1</td>
+                    <td>Ilimitados</td>
+                    <td>Ilimitados</td>
                 </tr>
                 <tr>
-                    <td class="topico">Coisa y que não sei e talvez precise saber</td>
-                    <td class="naopossui"></td>
-                    <td class="naopossui"></td>
-                    <td class="possui"></td>
-                    <td class="possui"></td>
+                    <td>Sem anúncios</td>
+                    <td>❌</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
                 </tr>
                 <tr>
-                    <td class="topico">Coisa z que não sei e talvez precise saber</td>
-                    <td class="possui"></td>
-                    <td class="possui"></td>
-                    <td class="possui"></td>
-                    <td class="naopossui"></td>
+                    <td>Automação manual via scripts de texto</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
+                    <td>✔️</td>
                 </tr>
-            </tbody>
-        </table>
+                <tr>
+                    <td>IA do Lotl Integrada</td>
+                    <td>❌</td>
+                    <td>❌</td>
+                    <td>✔️</td>
+                </tr>
+            </table>
+        </div>
     </div>
 </body>
 </html>
