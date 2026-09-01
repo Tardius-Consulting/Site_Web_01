@@ -25,24 +25,30 @@
         }
 
         body > div{
-            width: 1300px;
+            width: 85.168vw;
             margin: auto;
         }
 
-        body > div > h1{
+        body > div > h2{
+            font-size: 2rem;
             padding: 50px 0px 20px 0px;
         }
 
+        body > div > ul{
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
         body > div > table{
-            width: 1300px;
+            width: 100%;
             height: 350px;
             margin: auto;
             border-spacing: 10px;
+            table-layout: fixed;
         }
 
         body > div > table div{
             height: 100%;
-            width: 425px;
             display: inline-block;
             padding: 20px;
             border: 2px solid black;
@@ -50,23 +56,9 @@
             box-shadow: 0 5px 15px rgba(0,0,0,.08);
         }
 
-        body > div > table div h1, body > div > div > table h1{
-            font-size: 1.5rem;
-            padding-bottom: 15px;
-        }
-
-        body > div > table div h2, body > div > div > table h2{
-            display: inline-block;
-            font-size: 1.8rem;
-        }
-
         body > div > table div p, body > div > div > table p{
             font-size: 0.9rem;
             padding-bottom: 30px;
-        }
-
-        body > div > table div p.tempo, body > div > div > table p{
-            display: inline-block;
         }
 
         body > div > table div a, body > div > div > table a{
@@ -96,18 +88,10 @@
             font-size: 20px;
         }
 
-
-
-
-
-
-
-
-
         body > div > div{
             margin: auto;
             margin-bottom: 20px;
-            width: 1300px;
+            width: 100%;
             border: 2px solid black;
             border-radius: 15px;
             overflow: hidden;
@@ -133,11 +117,6 @@
             text-align: center;
             padding: 15px 0px 15px 15px;
         }
-
-        body > div > div > table h1{
-            padding-bottom: 10px;
-            padding-top: 20px;
-        }
         
         body > div > div > table a{
             padding: 6px 0px;
@@ -157,29 +136,29 @@
 </head>
 <body>
     <div>
-        <h1>Planos</h1>
-        <table id="planos">
+        <h2>Planos</h2>
+        <table>
             <tr>
                 <td>
-                    <div class="plano">
-                        <h1>Plano FREE</h1>
-                        <p class="descricao">Desenvolvedores iniciantes testando o sistema ou organizando seu primeiro projeto.</p>
-                        <h2>R$ 0,00</h2>
-                        <p class="tempo">/mês</p><br>
+                    <div>
+                        <p style="font-size: 1.5rem; font-weight: bold; padding-bottom: 15px;">Plano FREE</p>
+                        <p>Desenvolvedores iniciantes testando o sistema ou organizando seu primeiro projeto.</p>
+                        <p style="font-size: 1.8rem; font-weight: bold; display: inline-block;">R$ 0,00</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Começar Grátis</a>
                         <ul>
                             <li>Limite de 1 projeto ativo.</li>
-                            <li>Automação manual via scripts de texto (criação automática de cards a partir do seu texto ou de IAs externas).</li>
+                            <li><sup>1</sup> Automação manual via scripts de texto.</li>
                             <li>Exibição de anúncios discretos durante a navegação.</li>
                         </ul>
                     </div>
                 </td>
                 <td>
-                    <div class="plano">
-                        <h1>Plano INDIE</h1>
-                        <p class="descricao">Desenvolvedores que criam múltiplos jogos e querem uma experiência fluida.</p>
-                        <h2>R$ 14,99</h2>
-                        <p class="tempo">/mês</p><br>
+                    <div>
+                        <p style="font-size: 1.5rem; font-weight: bold; padding-bottom: 15px;">Plano INDIE</p>
+                        <p>Desenvolvedores que criam múltiplos jogos e querem uma experiência fluida.</p>
+                        <p style="font-size: 1.8rem; font-weight: bold; display: inline-block;">R$ 14,99</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Assinar Plano Indie</a>
                         <ul>
                             <li>Tudo do Plano Free +</li>
@@ -189,41 +168,46 @@
                     </div>
                 </td>
                 <td>
-                    <div class="plano">
-                        <h1>Plano PRO</h1>
-                        <p class="descricao">Devs que querem automatizar ao máximo o processo de documentação e criação de tarefas.</p>
-                        <h2>R$ 29,99</h2>
-                        <p class="tempo">/mês</p><br>
+                    <div>
+                        <p style="font-size: 1.5rem; font-weight: bold; padding-bottom: 15px; display: inline-block; padding: 0px;">Plano PRO</p>
+                        <p style="font-size: 1.1rem; font-weight: bold; display: inline-block; color: var(--Laranja-Destaque); padding-bottom: 15px;">(RECOMENDADO)</p>
+                        <p>Devs que querem automatizar ao máximo o processo de documentação e criação de tarefas.</p>
+                        <p style="font-size: 1.8rem; font-weight: bold; display: inline-block;">R$ 29,99</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Assinar Plano Pro</a>
                         <ul>
                             <li>Tudo do Plano Indie +</li>
-                            <li>IA do Lotl Integrada: Geração automática da própria documentação e dos documentos base para criação dos cards via inteligência artificial interna do sistema.</li>
+                            <li><sup>2</sup> IA do Lotl Integrada</li>
                         </ul>
                     </div>
                 </td>
             </tr>
         </table>
-        <h1>Comparação de Planos</h1>
+        <ul>
+            <li><sup>1</sup> Criação automática de cards a partir do seu texto ou de IAs externas</li>
+            <li><sup>2</sup> Geração automática da própria documentação e dos documentos base para criação dos cards via inteligência artificial interna do sistema.</li>
+        </ul>
+        <h2>Comparação de Planos</h2>
         <div>
             <table>
                 <tr>
                     <th></th>
                     <th>
-                        <h1>Plano FREE</h1>
-                        <h2>R$ 0,00</h2>
-                        <p>/mês</p><br>
+                        <p style="font-size: 1.5rem; padding-bottom: 10px; padding-top: 20px;">Plano FREE</p><br>
+                        <p style="font-size: 1.9rem; display: inline-block;">R$ 0,00</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Começar Grátis</a>
                     </th>
                     <th>
-                        <h1>Plano INDIE</h1>
-                        <h2>R$ 14,99</h2>
-                        <p>/mês</p><br>
+                        <p style="font-size: 1.5rem; padding-bottom: 10px; padding-top: 20px;">Plano INDIE</p><br>
+                        <p style="font-size: 1.9rem; display: inline-block;">R$ 14,99</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Assinar Plano Indie</a>
                     </th>
                     <th>
-                        <h1>Plano PRO</h1>
-                        <h2>R$ 29,99</h2>
-                        <p>/mês</p><br>
+                        <p style="font-size: 1.5rem; padding-bottom: 10px; padding-top: 20px;">Plano PRO</p><br>
+                        <p style="font-size: 1.9rem; display: inline-block;">R$ 29,99</p>
+                        <p style="display: inline-block;">/mês</p><br>
                         <a href="#">Assinar Plano PRO</a>
                     </th>
                 </tr>
@@ -234,14 +218,14 @@
                     <td>Ilimitados</td>
                 </tr>
                 <tr>
-                    <td>Sem anúncios</td>
-                    <td>❌</td>
+                    <td>Automação manual via scripts de texto</td>
+                    <td>✔️</td>
                     <td>✔️</td>
                     <td>✔️</td>
                 </tr>
                 <tr>
-                    <td>Automação manual via scripts de texto</td>
-                    <td>✔️</td>
+                    <td>Sem anúncios</td>
+                    <td>❌</td>
                     <td>✔️</td>
                     <td>✔️</td>
                 </tr>
