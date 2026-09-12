@@ -8,6 +8,10 @@ body{
     padding: 0;
 }
 
-div{
-    max-width: 1300px;
+a{
+    color: white;
+}
+
+a:hover{
+    color: #333;
 }
