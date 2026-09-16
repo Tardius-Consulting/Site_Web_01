@@ -10,8 +10,50 @@ body{
 
 a{
     color: white;
+    text-decoration: none;
 }
 
 a:hover{
-    color: #333;
+    color: #FF82A9;
+}
+
+.header{
+    background-color: #1A1F2C;
+    width: 1300px;
+    padding: 20px;
+}
+
+.headerButton{
+    border-radius: 5px; 
+    padding: 5px; 
+    background-color: #FF82A9; 
+    color: #12151E;
+    width: 100px;
+    margin-right: 10px;
+}
+
+.headerButton:hover{
+    border: 1px solid #FF82A9;
+    border-radius: 5px; 
+    padding: 5px; 
+    background-color: #12151E; 
+    color: #FF82A9;
+}
+
+.headerButton p{
+    text-align: center;
+}
+
+.headerTitle{
+    color: #FF82A9;
+    margin: auto 0 auto 0;
+}
+
+.headerTitle:hover{
+    color: #FFF;
+}
+
+.headerTitle img{
+    width: 51px;
+    margin: 0 15px 0 20px;
 }
