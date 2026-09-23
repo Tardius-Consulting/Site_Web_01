@@ -1,0 +1,40 @@
+/*vai atuar somente na div pai*/
+.main-div{
+    width: 1300px;
+}
+/*consigurações gerais da imagem principal do sistema*/
+.main-image{
+    width: 70%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px ridge black;
+}
+/*configurações das imagens complementares*/
+.complementary-image{
+    width: 25%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px ridge black;
+}
+/*vai atuar nas divs que contém os cards*/
+.second-div{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+/*define específicações dos cards*/
+.card{
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 30px;
+}
+/*para cards que tenham textos que precisam ser separados em quebras de linha*/
+.card-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
