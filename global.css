@@ -8,6 +8,15 @@ body{
     padding: 0;
 }
 
+h1{
+    font-family: sans-serif;
+    font-size: 44px;
+    font-weight: 800;
+    color: #FFF;
+    text-align: center;
+    padding: 50px;
+}
+
 a{
     color: white;
     text-decoration: none;
@@ -34,14 +43,13 @@ a:hover{
 
 .headerButton:hover{
     border: 1px solid #FF82A9;
-    border-radius: 5px; 
-    padding: 5px; 
     background-color: #12151E; 
     color: #FF82A9;
 }
 
 .headerButton p{
     text-align: center;
+    margin:0;
 }
 
 .headerTitle{
@@ -56,4 +64,33 @@ a:hover{
 .headerTitle img{
     width: 51px;
     margin: 0 15px 0 20px;
+}
+
+.banner{
+    background-color: #1A1F2C;
+    width: 1300px;
+    margin: auto;
+    padding: 20px;
+}
+
+.bannerButton{
+    border: 1px solid #FF82A9;
+    border-radius: 5px; 
+    padding: 10px 15px 10px 15px; 
+    background-color: #FF82A9; 
+    color: #12151E;
+    width: 150px;
+    margin: 5px auto 15px auto;
+}
+
+.bannerButton:hover{
+    background-color: #12151E; 
+    color: #FF82A9;
+}
+
+.bannerButton p{
+    text-align: center;
+    margin:0;
+    font-size: 20px; 
+    font-weight: bold;
 }

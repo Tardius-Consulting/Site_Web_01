@@ -1,0 +1,10 @@
+img{
+    border-radius: 10px; 
+    width: 300px;
+    margin: 15px 30px;
+}
+
+p{
+    text-align: justify;
+    margin-bottom: 10px;
+}
