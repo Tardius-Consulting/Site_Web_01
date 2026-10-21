@@ -130,17 +130,23 @@
 }
 
 .comparision-table{
+    display: flex;
+    flex-flow: row wrap;
     width: 100%;
     margin-bottom: 20px;
-    border: 2px solid black;
+    border: 1px solid #12151e;
+    border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
 }
 
 .comparision-plan{
-    padding: 0px 20px;
+    flex: 1 1 270px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
     padding-bottom: 25px;
-    border: 1px solid black;
+    border: 1px solid #12151e;
 }
 
 .comparision-plan-type{
@@ -162,23 +168,51 @@
     padding: 8px 40px;
     font-size: 14px;
     font-weight: 600;
+    color: #12151e;
     background-color: #ff82a9;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 30px;
+    transition: color 0.4s;
 }
 
 .button-comparision:hover{
-    color: #12151e;
+    color: white;
 }
 
 .comparision-subject{
+    flex: 1 1 390px;
+    font-size: 18px; 
+    font-weight: bold;
     text-align: left;
     padding: 15px 0px 15px 15px;
     border: 1px solid black;
 }
 
-.comparision-value{
+.comparision-value-text, .comparision-value-check, .comparision-value-uncheck{
+    flex: 1 1 270px;
     text-align: center;
     padding: 15px 0px 15px 15px;
     border: 1px solid black;
+}
+
+.comparision-value-check::before{
+    content: "\e5ca ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #ff82a9;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-15px, -8px);
+}
+
+.comparision-value-uncheck::before{
+    content: "\e5cd ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #12151e;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-15px, -8px);
 }
