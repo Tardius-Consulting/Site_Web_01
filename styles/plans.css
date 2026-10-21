@@ -20,11 +20,28 @@
     color: #12151e;
 }
 
+.plans-container{
+    width: 100%; 
+    margin: auto; 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .plans-plan{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 375px;
+    
+}
+
+.plans-plan-content{
+    grid-row: 2 / 3;
     width: 420px;
     height: 100%;
     padding: 20px;
-    border: 2px solid black;
+    text-align: left;
+    border: 1px solid #12151e;
     border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
@@ -53,36 +70,55 @@
 }
 
 .plans-subscription-benefits{
+    list-style-type: none;
     padding-top: 30px;
-    padding-left: 15px;
+    padding-left: 35px;
 }
 
 .plans-subscription-benefits-item{
     padding-bottom: 10px;
+    
+}
+
+.plans-subscription-benefits-item::before{
+    content: "\e5ca ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #ff82a9;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-35px, -10px);
 }
 
 .plans-recommendation{
+    grid-row: 1 / 2;
+    font-weight: 600;
     font-size: 20px;
+    padding-top: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #333333;
     background-color: #ff82a9;
-    padding: 4px;
-    border-radius: 5px;
 }
 
 .button-plans{
     font-size: 16px;
     font-weight: 600;
     padding: 15px 100px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 30px;
-    color: white;
+    color: #12151e;
     background-color: #ff82a9;
+    transition: color 0.4s;
 }
 
 .button-plans:hover{
-    color: #12151e;
+    color: white;
 }
 
 .plans-topics-explanation{
+    list-style-type: none;
     text-align: left;
     padding-top: 30px;
     padding-left: 25px;
