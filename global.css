@@ -1,50 +1,79 @@
+:root{
+  --main-color: #FF82A9;
+  --contrast-color:#1A1F2C;
+  --write-white:#FFF;
+  --background-white:#EEE;
+  --black-write:#333;
+}
 body{
-    background-color: #EEE;
-    color: #333333;
+    background-color: var(--background-white);
+    color: var(--black-write);
 }
 *{
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0;
+  font-family: sans-serif;
 }
 
+header{
+  background-color: var(--contrast-color);
+}
+
+.nav-item{
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+p{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  list-style-type: none;
+}
+
+.navbar-toggler-icon{
+  filter: invert(79%) sepia(19%) saturate(7257%) hue-rotate(299deg) brightness(105%) contrast(101%);
+}
+
+/*
+###########################################
+*/
+
 h1{
-    font-family: sans-serif;
     font-size: 44px;
     font-weight: 800;
-    color: #FFF;
+    color: var(--write-white);
     text-align: center;
     padding: 50px;
 }
 
 a{
-    color: white;
-    text-decoration: none;
+  color: var(--write-white);
+  text-decoration: none;
 }
 
 a:hover{
-    color: #FF82A9;
-}
-
-.header{
-    background-color: #1A1F2C;
-    width: 1300px;
-    padding: 20px;
+  color: var(--main-color);
 }
 
 .headerButton{
     border-radius: 5px; 
     padding: 5px; 
-    background-color: #FF82A9; 
-    color: #12151E;
+    background-color: var(--contrast-color); 
+    color: var(--main-color);
     width: 100px;
     margin-right: 10px;
+    text-decoration: underline;
 }
 
 .headerButton:hover{
-    border: 1px solid #FF82A9;
-    background-color: #12151E; 
-    color: #FF82A9;
+    background-color: var(--main-color); 
+    color: var(--contrast-color);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .headerButton p{
@@ -53,24 +82,17 @@ a:hover{
 }
 
 .headerTitle{
-    color: #FF82A9;
+    color: var(--write-white);
     margin: auto 0 auto 0;
 }
 
 .headerTitle:hover{
-    color: #FFF;
+    color: var(--main-color);
 }
 
-.headerTitle img{
-    width: 51px;
-    margin: 0 15px 0 20px;
-}
 
 .banner{
-    background-color: #1A1F2C;
-    width: 1300px;
-    margin: auto;
-    padding: 20px;
+  height: 600px;
 }
 
 .bannerButton{
@@ -86,6 +108,7 @@ a:hover{
 .bannerButton:hover{
     background-color: #12151E; 
     color: #FF82A9;
+    cursor: pointer;
 }
 
 .bannerButton p{
@@ -93,4 +116,59 @@ a:hover{
     margin:0;
     font-size: 20px; 
     font-weight: bold;
+}
+
+/*
+######################################################################
+*/
+
+.flex-conteiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.flex-column{
+  display: flex;
+  padding-inline: 20px;
+  width:100%;
+  max-width: 1300px;
+}
+
+.flex-row-1300-800, .flex-row-1300-900{
+  width:100%;
+  max-width: 1300px;
+}
+
+.flex-row-1300-800, .flex-row-1300-800-short, .flex-row-1300-900{
+  display: flex;
+  flex-direction: row;
+  padding-inline: 20px;
+}
+
+footer{
+  background-color: #1A1F2C;
+}
+
+footer a{
+  color:var(--write-white);
+}
+
+.footer-component{
+  width: 50%;
+  color: #FFF;
+}
+
+@media (max-width:700px){
+  .flex-row-1300-800{
+    flex-direction:column;
+  }
+}
+
+@media (max-width:992px){
+  .headerButton p{
+    text-align: left;
+  }
 }

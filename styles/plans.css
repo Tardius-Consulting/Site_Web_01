@@ -3,15 +3,6 @@
     font-family: sans-serif;
 }
 
-.title{
-    font-size: 44px;
-    font-weight: 800;
-    text-align: center;
-    padding: 50px;
-    background-color: #ff82a9;
-    color: #12151e;
-}
-
 .subtitle{
     font-size: 28px;
     font-weight: 700;
@@ -20,11 +11,28 @@
     color: #12151e;
 }
 
+.plans-container{
+    width: 100%; 
+    margin: auto; 
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
 .plans-plan{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 375px;
+    
+}
+
+.plans-plan-content{
+    grid-row: 2 / 3;
     width: 420px;
     height: 100%;
     padding: 20px;
-    border: 2px solid black;
+    text-align: left;
+    border: 1px solid #12151e;
     border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
@@ -53,36 +61,55 @@
 }
 
 .plans-subscription-benefits{
+    list-style-type: none;
     padding-top: 30px;
-    padding-left: 15px;
+    padding-left: 35px;
 }
 
 .plans-subscription-benefits-item{
     padding-bottom: 10px;
+    
+}
+
+.plans-subscription-benefits-item::before{
+    content: "\e5ca ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #ff82a9;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-35px, -10px);
 }
 
 .plans-recommendation{
+    grid-row: 1 / 2;
+    font-weight: 600;
     font-size: 20px;
+    padding-top: 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #333333;
     background-color: #ff82a9;
-    padding: 4px;
-    border-radius: 5px;
 }
 
 .button-plans{
     font-size: 16px;
     font-weight: 600;
     padding: 15px 100px;
-    border: 3px solid black;
+    border: 1px solid black;
     border-radius: 30px;
-    color: white;
+    color: #12151e;
     background-color: #ff82a9;
+    transition: color 0.4s;
 }
 
 .button-plans:hover{
-    color: #12151e;
+    color: white;
 }
 
 .plans-topics-explanation{
+    list-style-type: none;
     text-align: left;
     padding-top: 30px;
     padding-left: 25px;
@@ -93,56 +120,90 @@
     padding-bottom: 10px;
 }
 
-.comparision-table{
+.comparison-table{
+    display: flex;
+    flex-flow: row wrap;
     width: 100%;
     margin-bottom: 20px;
-    border: 2px solid black;
+    border: 1px solid #12151e;
+    border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
 }
 
-.comparision-plan{
-    padding: 0px 20px;
+.comparison-plan{
+    flex: 1 1 270px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 15px;
     padding-bottom: 25px;
-    border: 1px solid black;
+    border: 1px solid #12151e;
 }
 
-.comparision-plan-type{
+.comparison-plan-type{
     font-size: 24px;
     padding-bottom: 10px;
     padding-top: 20px;
 }
 
-.comparision-plan-price{
+.comparison-plan-price{
     font-size: 28px;
     padding-bottom: 15px;
 }
 
-.comparision-plan-price-subscription-duration{
+.comparison-plan-price-subscription-duration{
     font-size: 20px;
 }
 
-.button-comparision{
+.button-comparison{
     padding: 8px 40px;
     font-size: 14px;
     font-weight: 600;
-    background-color: #ff82a9;
-    border: 3px solid black;
-    border-radius: 30px;
-}
-
-.button-comparision:hover{
     color: #12151e;
+    background-color: #ff82a9;
+    border: 1px solid black;
+    border-radius: 30px;
+    transition: color 0.4s;
 }
 
-.comparision-subject{
+.button-comparison:hover{
+    color: white;
+}
+
+.comparison-subject{
+    flex: 1 1 390px;
+    font-size: 18px; 
+    font-weight: bold;
     text-align: left;
     padding: 15px 0px 15px 15px;
     border: 1px solid black;
 }
 
-.comparision-value{
+.comparison-value-text, .comparison-value-check, .comparison-value-uncheck{
+    flex: 1 1 270px;
     text-align: center;
     padding: 15px 0px 15px 15px;
     border: 1px solid black;
+}
+
+.comparison-value-check::before{
+    content: "\e5ca ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #ff82a9;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-15px, -8px);
+}
+
+.comparison-value-uncheck::before{
+    content: "\e5cd ";
+    font-family: 'Material Symbols Outlined';
+    font-size: 30px;
+    font-variation-settings: 'FILL' 1, 'wght' 1000;
+    color: #12151e;
+    -webkit-text-stroke: 1px #12151e;
+    position: absolute;
+    transform: translate(-15px, -8px);
 }
