@@ -1,10 +1,40 @@
-td img{
+.image-conteiner img{
     border-radius: 10px; 
     width: 300px;
     margin: 15px 30px;
 }
 
+.image-conteiner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 p{
     text-align: justify;
     margin-bottom: 10px;
+}
+
+.about-info, .about-info-revert{
+  padding: 20px; 
+  font-family: sans-serif; 
+  font-size: 18px;
+}
+
+.about-info-revert{
+  flex-flow: row-reverse;
+}
+
+h2{
+  text-align: right;
+}
+
+@media (max-width:900px) {
+  .about-info-revert{
+    flex-flow: column;
+  }
+
+  h2{
+    text-align: center;
+  }
 }

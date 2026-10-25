@@ -167,6 +167,12 @@ footer a{
   }
 }
 
+@media (max-width:900px){
+  .flex-row-1300-900{
+    flex-direction:column;
+  }
+}
+
 @media (max-width:992px){
   .headerButton p{
     text-align: left;
