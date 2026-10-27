@@ -14,22 +14,21 @@
 
 .plans-container{
     width: 100%; 
-    margin: auto; 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
 }
 
 .plans-plan{
     display: grid;
+    flex: 0 1 420px;
     grid-template-columns: auto;
-    grid-template-rows: 50px 375px;
-    
+    grid-template-rows: 50px auto;   
 }
 
 .plans-plan-content{
     grid-row: 2 / 3;
-    width: 420px;
     height: 100%;
     padding: 20px;
     text-align: left;
