@@ -214,3 +214,15 @@
     position: absolute;
     transform: translate(-15px, -8px);
 }
+
+@media (max-width: 1023px)  {
+    .plans-container{
+        max-width: 700px;
+        flex-flow: column nowrap;
+        gap: 20px;
+    }
+
+    .plans-plan{
+        grid-template-rows: auto auto;
+    }
+}
