@@ -129,21 +129,26 @@
 
 .comparison-table{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid #12151e;
     border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
+    overflow-x: auto;
+}
+
+.comparison-row{
+    display: flex;
+    min-width: 1000px;
 }
 
 .comparison-plan{
-    flex: 1 1 270px;
+    flex: 1 0 150px;
     font-weight: 600;
     text-align: left;
-    padding-left: 15px;
-    padding-bottom: 25px;
+    padding: 10px 10px;
     border: 1px solid #12151e;
 }
 
@@ -163,14 +168,7 @@
 }
 
 .button-comparison{
-    padding: 8px 40px;
     font-size: 14px;
-    font-weight: 600;
-    color: #12151e;
-    background-color: #ff82a9;
-    border: 1px solid black;
-    border-radius: 30px;
-    transition: color 0.4s;
 }
 
 .button-comparison:hover{
@@ -178,18 +176,20 @@
 }
 
 .comparison-subject{
-    flex: 1 1 390px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 200px;
     font-size: 18px; 
     font-weight: bold;
-    text-align: left;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 15px 15px 15px;
     border: 1px solid black;
 }
 
 .comparison-value-text, .comparison-value-check, .comparison-value-uncheck{
-    flex: 1 1 270px;
-    text-align: center;
-    padding: 15px 0px 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 150px;
     border: 1px solid black;
 }
 
@@ -200,8 +200,6 @@
     font-variation-settings: 'FILL' 1, 'wght' 1000;
     color: #ff82a9;
     -webkit-text-stroke: 1px #12151e;
-    position: absolute;
-    transform: translate(-15px, -8px);
 }
 
 .comparison-value-uncheck::before{
@@ -211,8 +209,6 @@
     font-variation-settings: 'FILL' 1, 'wght' 1000;
     color: #12151e;
     -webkit-text-stroke: 1px #12151e;
-    position: absolute;
-    transform: translate(-15px, -8px);
 }
 
 @media (max-width: 1023px)  {
