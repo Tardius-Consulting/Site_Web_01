@@ -1,5 +1,6 @@
 .page-main-content{
-    width: 1300px;
+    max-width: 1300px;
+    flex-flow: column nowrap;
     font-family: sans-serif;
 }
 
