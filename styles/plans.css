@@ -85,9 +85,12 @@
 
 .plans-recommendation{
     grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     font-weight: 600;
     font-size: 20px;
-    padding-top: 15px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     color: #333333;
