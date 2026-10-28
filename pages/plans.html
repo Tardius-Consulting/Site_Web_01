@@ -80,100 +80,104 @@
           </div>
         </div>
     </header>
-    <table style="width: 100%;">
-        <tr>
-            <td align="center" colspan="2">
-                <div class="page-main-content">
-                    <h2 class="subtitle">Planos</h2>
-                    <div class="plans-container">
-                            <div class="plans-plan">
-                                <div class="plans-plan-content">
-                                    <p class="plans-type">Plano FREE</p>
-                                    <p class="plans-description">Desenvolvedores iniciantes testando o sistema ou organizando seu primeiro projeto.</p>
-                                    <p class="plans-price">R$ 0,00<sub class="plans-price-subscription-duration">/mês</sub></p>
-                                    <a href="#" class="button-plans">Começar Grátis</a>
-                                    <ul class="plans-subscription-benefits">
-                                        <li class="plans-subscription-benefits-item">Limite de 1 projeto ativo.</li>
-                                        <li class="plans-subscription-benefits-item"><sup>1</sup> Automação manual via scripts de texto.</li>
-                                        <li class="plans-subscription-benefits-item">Exibição de anúncios discretos durante a navegação.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="plans-plan">    
-                                <div class="plans-plan-content">
-                                    <p class="plans-type">Plano INDIE</p>
-                                    <p class="plans-description">Desenvolvedores que criam múltiplos jogos e querem uma experiência fluida.</p>
-                                    <p class="plans-price">R$ 9,99<sub class="plans-price-subscription-duration">/mês</sub></p>
-                                    <a href="#" class="button-plans">Assinar Plano Indie</a>
-                                    <ul class="plans-subscription-benefits">
-                                        <li class="plans-subscription-benefits-item">Tudo do Plano Free +</li>
-                                        <li class="plans-subscription-benefits-item">Projetos ilimitados.</li>
-                                        <li class="plans-subscription-benefits-item">Navegação 100% livre de anúncios.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="plans-plan">
-                                <p class="plans-recommendation">RECOMENDADO</p>
-                                <div class="plans-plan-content" style="border-top-left-radius: 0px; border-top-right-radius: 0px; border: 2px solid #ff82a9;">
-                                    <p class="plans-type">Plano PRO </p>
-                                    <p class="plans-description">Devs que querem automatizar ao máximo o processo de documentação e criação de tarefas.</p>
-                                    <p class="plans-price">R$ 29,99<sub class="plans-price-subscription-duration">/mês</sub></p>
-                                    <a href="#" class="button-plans">Assinar Plano Pro</a>
-                                    <ul class="plans-subscription-benefits">
-                                        <li class="plans-subscription-benefits-item">Tudo do Plano Indie +</li>
-                                        <li class="plans-subscription-benefits-item"><sup>2</sup> IA do Lotl Integrada</li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </div>
-                    <ul class="plans-topics-explanation">
-                        <li class="plans-topics-explanation-item"><sup>1</sup> Criação automática de cards a partir do seu texto ou de IAs externas</li>
-                        <li class="plans-topics-explanation-item"><sup>2</sup> Geração automática da própria documentação e dos documentos base para criação dos cards via inteligência artificial interna do sistema.</li>
-                    </ul>
-                    <h2 class="subtitle">Comparação de Planos</h2>
-                    <div class="comparison-table">
-                        <div class="comparison-plan" style="flex-basis: 390px; border-top-left-radius: 12px; text-align: center;">
-                            <img src="../images/logo/logo.webp" alt="Lotl Logo" style="max-width: 140px; transform: translate(-5px, 30px);">
-                        </div>
-                        <div class="comparison-plan">
-                            <p class="comparison-plan-type">Plano FREE</p><br>
-                            <p class="comparison-plan-price">R$ 0,00<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
-                            <a href="#" class="button-comparison">Começar Grátis</a>
-                        </div>
-                        <div class="comparison-plan">
-                            <p class="comparison-plan-type">Plano INDIE</p><br>
-                            <p class="comparison-plan-price">R$ 14,99<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
-                            <a href="#" class="button-comparison">Assinar Plano Indie</a>
-                        </div>
-                        <div class="comparison-plan" style="border-top-right-radius: 12px;">
-                            <p class="comparison-plan-type">Plano PRO</p><br>
-                            <p class="comparison-plan-price">R$ 29,99<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
-                            <a href="#" class="button-comparison">Assinar Plano PRO</a>
-                        </div>
-                        <p class="comparison-subject">Projetos</p>
-                        <p class="comparison-value-text">Somente 1</p>
-                        <p class="comparison-value-text">Ilimitados</p>
-                        <p class="comparison-value-text">Ilimitados</p>
-
-                        <p class="comparison-subject">Automação manual via scripts de texto</p>
-                        <p class="comparison-value-check"></p>
-                        <p class="comparison-value-check"></p>
-                        <p class="comparison-value-check"></p>
-
-                        <p class="comparison-subject">Sem anúncios</p>
-                        <p class="comparison-value-uncheck"></p>
-                        <p class="comparison-value-check"></p>
-                        <p class="comparison-value-check"></p>
-
-                        <p class="comparison-subject" style="border-bottom-left-radius: 12px;">IA do Lotl Integrada</p>
-                        <p class="comparison-value-uncheck"></p>
-                        <p class="comparison-value-uncheck"></p>
-                        <p class="comparison-value-check" style="border-bottom-right-radius: 12px;"></p>
+    <main class="page-main-content flex-conteiner">
+        <h2 class="subtitle">Planos</h2>
+        <section class="plans-container">
+                <div class="plans-plan">
+                    <div class="plans-plan-content">
+                        <p class="plans-type">Plano FREE</p>
+                        <p class="plans-description">Desenvolvedores iniciantes testando o sistema ou organizando seu primeiro projeto.</p>
+                        <p class="plans-price">R$ 0,00<sub class="plans-price-subscription-duration">/mês</sub></p>
+                        <a href="#" class="button-plans">Começar Grátis</a>
+                        <ul class="plans-subscription-benefits">
+                            <li class="plans-subscription-benefits-item">Limite de 1 projeto ativo.</li>
+                            <li class="plans-subscription-benefits-item"><sup>1</sup> Criação de cards a partir de documentos.</li>
+                        </ul>
                     </div>
                 </div>
-            </td>
-        </tr>
-    </table>
+                <div class="plans-plan">    
+                    <div class="plans-plan-content">
+                        <p class="plans-type">Plano INDIE</p>
+                        <p class="plans-description">Desenvolvedores que criam múltiplos jogos e querem uma experiência fluida.</p>
+                        <p class="plans-price">R$ 9,99<sub class="plans-price-subscription-duration">/mês</sub></p>
+                        <a href="#" class="button-plans">Assinar Plano Indie</a>
+                        <ul class="plans-subscription-benefits">
+                            <li class="plans-subscription-benefits-item">Tudo do Plano Free +</li>
+                            <li class="plans-subscription-benefits-item">Projetos ilimitados.</li>
+                            <li class="plans-subscription-benefits-item">Navegação livre de anúncios.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="plans-plan">
+                    <div class="plans-recommendation">
+                        <p class="plans-recommendation">RECOMENDADO</p>
+                    </div>
+                    <div class="plans-plan-content" style="border-top-left-radius: 0px; border-top-right-radius: 0px; border: 2px solid #ff82a9;">
+                        <p class="plans-type">Plano PRO </p>
+                        <p class="plans-description">Devs que querem automatizar ao máximo o processo de documentação e criação de tarefas.</p>
+                        <p class="plans-price">R$ 29,99<sub class="plans-price-subscription-duration">/mês</sub></p>
+                        <a href="#" class="button-plans">Assinar Plano Pro</a>
+                        <ul class="plans-subscription-benefits">
+                            <li class="plans-subscription-benefits-item">Tudo do Plano Indie +</li>
+                            <li class="plans-subscription-benefits-item"><sup>2</sup> IA do Lotl Integrada</li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+        <ul class="plans-topics-explanation">
+            <li class="plans-topics-explanation-item"><sup>1</sup> Todos os usuários podem criar seus cards inserindo um documento de texto que esteja formatado de acordo com as exigências do sistema.
+</li>
+            <li class="plans-topics-explanation-item"><sup>2</sup> O Lotl possui um agente de IA personalizado para auxiliar no planejamento e na elaboração de documentos que podem ser usados para a criação de cards do seu projeto.</li>
+        </ul>
+        <h2 class="subtitle">Comparação de Planos</h2>
+        <section class="comparison-table">
+            <div class="comparison-row">
+              <div class="comparison-plan" style="flex: 1 0 200px; display: flex; justify-content: center; align-items: center;">
+                  <img src="../images/logo/logo.webp" alt="Lotl Logo" style="max-width: 200px; transform: translateY(30px);">
+              </div>
+              <div class="comparison-plan">
+                  <p class="comparison-plan-type">Plano FREE</p><br>
+                  <p class="comparison-plan-price">R$ 0,00<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
+                  <a href="#" class="button-plans button-comparison">Começar Grátis</a>
+              </div>
+              <div class="comparison-plan">
+                  <p class="comparison-plan-type">Plano INDIE</p><br>
+                  <p class="comparison-plan-price">R$ 14,99<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
+                  <a href="#" class="button-plans button-comparison">Assinar Plano Indie</a>
+              </div>
+              <div class="comparison-plan" style="border-top-right-radius: 12px;">
+                  <p class="comparison-plan-type">Plano PRO</p><br>
+                  <p class="comparison-plan-price">R$ 29,99<sub class="comparison-plan-price-subscription-duration">/mês</sub></p>
+                  <a href="#" class="button-plans button-comparison">Assinar Plano PRO</a>
+              </div>
+            </div>
+            <div class="comparison-row">
+              <p class="comparison-subject">Projetos</p>
+              <p class="comparison-value-text">Somente 1</p>
+              <p class="comparison-value-text">Ilimitados</p>
+              <p class="comparison-value-text">Ilimitados</p>
+            </div>
+            <div class="comparison-row">
+              <p class="comparison-subject">Criação de cards a partir de documentos</p>
+              <p class="comparison-value-check"></p>
+              <p class="comparison-value-check"></p>
+              <p class="comparison-value-check"></p>
+            </div>
+            <div class="comparison-row">
+              <p class="comparison-subject">Sem anúncios</p>
+              <p class="comparison-value-uncheck"></p>
+              <p class="comparison-value-check"></p>
+              <p class="comparison-value-check"></p>
+            </div>
+            <div class="comparison-row">
+              <p class="comparison-subject" style="border-bottom-left-radius: 12px;">IA do Lotl Integrada</p>
+              <p class="comparison-value-uncheck"></p>
+              <p class="comparison-value-uncheck"></p>
+              <p class="comparison-value-check" style="border-bottom-right-radius: 12px;"></p>
+            </div>
+          </div>
+        </section>
+      </main>
     <footer class="row flex-conteiner"> 
       <div class="flex-row-1300-800 justify-content-between align-items-center py-3 my-4 border-top"> 
         <a href="/index.html" class="nav-link mt-2 px-2">

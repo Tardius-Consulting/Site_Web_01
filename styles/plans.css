@@ -1,5 +1,7 @@
 .page-main-content{
-    width: 1300px;
+    flex-flow: column nowrap;
+    max-width: 1300px;
+    margin: auto;
     font-family: sans-serif;
 }
 
@@ -7,28 +9,27 @@
     font-size: 28px;
     font-weight: 700;
     text-align: left;
-    padding: 50px 0px 20px 20px;
+    padding: 50px 0px 20px 0px;
     color: #12151e;
 }
 
 .plans-container{
     width: 100%; 
-    margin: auto; 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10px;
 }
 
 .plans-plan{
     display: grid;
+    flex: 0 1 420px;
     grid-template-columns: auto;
-    grid-template-rows: 50px 375px;
-    
+    grid-template-rows: 50px auto;   
 }
 
 .plans-plan-content{
     grid-row: 2 / 3;
-    width: 420px;
     height: 100%;
     padding: 20px;
     text-align: left;
@@ -84,9 +85,12 @@
 
 .plans-recommendation{
     grid-row: 1 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
     font-weight: 600;
     font-size: 20px;
-    padding-top: 15px;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     color: #333333;
@@ -94,9 +98,12 @@
 }
 
 .button-plans{
+    display: block;
+    max-width: 300px;
     font-size: 16px;
     font-weight: 600;
-    padding: 15px 100px;
+    text-align: center;
+    padding: 15px 15px;
     border: 1px solid black;
     border-radius: 30px;
     color: #12151e;
@@ -112,7 +119,7 @@
     list-style-type: none;
     text-align: left;
     padding-top: 30px;
-    padding-left: 25px;
+    padding-left: 0px;
     color: #333333;
 }
 
@@ -122,21 +129,26 @@
 
 .comparison-table{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     width: 100%;
     margin-bottom: 20px;
     border: 1px solid #12151e;
     border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
+    overflow-x: auto;
+}
+
+.comparison-row{
+    display: flex;
+    min-width: 1000px;
 }
 
 .comparison-plan{
-    flex: 1 1 270px;
+    flex: 1 0 150px;
     font-weight: 600;
     text-align: left;
-    padding-left: 15px;
-    padding-bottom: 25px;
+    padding: 10px 10px;
     border: 1px solid #12151e;
 }
 
@@ -156,14 +168,7 @@
 }
 
 .button-comparison{
-    padding: 8px 40px;
     font-size: 14px;
-    font-weight: 600;
-    color: #12151e;
-    background-color: #ff82a9;
-    border: 1px solid black;
-    border-radius: 30px;
-    transition: color 0.4s;
 }
 
 .button-comparison:hover{
@@ -171,18 +176,20 @@
 }
 
 .comparison-subject{
-    flex: 1 1 390px;
+    display: flex;
+    align-items: center;
+    flex: 1 1 200px;
     font-size: 18px; 
     font-weight: bold;
-    text-align: left;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 15px 15px 15px;
     border: 1px solid black;
 }
 
 .comparison-value-text, .comparison-value-check, .comparison-value-uncheck{
-    flex: 1 1 270px;
-    text-align: center;
-    padding: 15px 0px 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 150px;
     border: 1px solid black;
 }
 
@@ -193,8 +200,6 @@
     font-variation-settings: 'FILL' 1, 'wght' 1000;
     color: #ff82a9;
     -webkit-text-stroke: 1px #12151e;
-    position: absolute;
-    transform: translate(-15px, -8px);
 }
 
 .comparison-value-uncheck::before{
@@ -204,6 +209,16 @@
     font-variation-settings: 'FILL' 1, 'wght' 1000;
     color: #12151e;
     -webkit-text-stroke: 1px #12151e;
-    position: absolute;
-    transform: translate(-15px, -8px);
+}
+
+@media (max-width: 1023px)  {
+    .plans-container{
+        max-width: 700px;
+        flex-flow: column nowrap;
+        gap: 20px;
+    }
+
+    .plans-plan{
+        grid-template-rows: auto auto;
+    }
 }
