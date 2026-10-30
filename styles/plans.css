@@ -69,7 +69,6 @@
 
 .plans-subscription-benefits-item{
     padding-bottom: 10px;
-    
 }
 
 .plans-subscription-benefits-item::before{
@@ -137,6 +136,24 @@
     color: #333333;
     background-color: #ffffff;
     overflow-x: auto;
+}
+
+.comparison-table::-webkit-scrollbar {
+    height: 12px;
+}
+
+.comparison-table::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: #e0e0e0; 
+}
+
+.comparison-table::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: #888888; 
+}
+
+.comparison-table::-webkit-scrollbar-thumb:hover {
+    background: #555555;
 }
 
 .comparison-row{
