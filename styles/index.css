@@ -7,14 +7,14 @@
     width: 70%;
     height: auto;
     border-radius: 15px;
-    border: 1px ridge black;
+    border: none;
 }
 /*configurações das imagens complementares*/
 .complementary-image{
     width: 25%;
     height: auto;
     border-radius: 15px;
-    border: 1px ridge black;
+    border: none;
 }
 /*vai atuar nas divs que contém os cards*/
 .second-div{
@@ -26,15 +26,44 @@
 }
 /*define específicações dos cards*/
 .card{
-    width: 300px;
+    width: 320px;
     height: auto;
-    border: 1px solid black;
+    border: none;
     border-radius: 10px;
-    margin: 30px;
+    margin: 10px;
+}
+.card-secondary{
+    width: 380px;
+    height: auto;
+    border: none;
+    border-radius: 10px;
+    margin: 20px;
 }
 /*para cards que tenham textos que precisam ser separados em quebras de linha*/
 .card-text{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+/*define um botão de flip para o card, as informações de problema/resolução ficariam num mesmo card*/
+.card-button{
+    padding: 5px 7px 5px 7px;
+    background-color: #FF82A9;
+    color: var(--write-black);
+    border: none;
+    border-radius: 10px;
+}
+.card-button:hover{
+    background-color: #12151E;
+    color: #FF82A9;
+    cursor: pointer;
+}
+.card-body{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #12151E;
+}
+.card-body p{
+    color: var(--write-white);
+    text-align: center;
 }

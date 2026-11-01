@@ -45,7 +45,7 @@ ul{
 h1{
     font-size: 44px;
     font-weight: 800;
-    color: var(--write-white);
+    color: var(--write-black);
     text-align: center;
     padding: 50px;
 }
@@ -66,7 +66,7 @@ a:hover{
     color: var(--main-color);
     width: 100px;
     margin-right: 10px;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .headerButton:hover{
@@ -92,9 +92,11 @@ a:hover{
 
 
 .banner{
-  height: 600px;
+  height: 400px;
+  background-image: url(images/SaaSInterface/WhatsApp\ Image\ 2026-09-23\ at\ 08.44.39.jpeg);
+  mask-image: linear-gradient(to bottom, rgba(238,238,238, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  background-size: cover;
 }
-
 .bannerButton{
     border: 1px solid #FF82A9;
     border-radius: 5px; 
