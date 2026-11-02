@@ -2,18 +2,26 @@
   --main-color: #FF82A9;
   --contrast-color:#1A1F2C;
   --write-white:#FFF;
-  --background-white:#EEE;
+  --background-body:#CCC;
   --black-write:#333;
+  --background-content: #FFF;
 }
+
 body{
-    background-color: var(--background-white);
-    color: var(--black-write);
+  background-color: var(--background-body);
+  color: var(--black-write);
 }
+
 *{
   box-sizing: border-box;
   margin: 0px;
   padding: 0;
   font-family: sans-serif;
+}
+
+.main-container{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 header{
@@ -38,6 +46,10 @@ ul{
   filter: invert(79%) sepia(19%) saturate(7257%) hue-rotate(299deg) brightness(105%) contrast(101%);
 }
 
+.flex-row-1300-900{
+  background-color: var(--background-content);
+}
+
 /*
 ###########################################
 */
@@ -45,7 +57,7 @@ ul{
 h1{
     font-size: 44px;
     font-weight: 800;
-    color: var(--write-black);
+    color: var(--write-white);
     text-align: center;
     padding: 50px;
 }
@@ -66,7 +78,7 @@ a:hover{
     color: var(--main-color);
     width: 100px;
     margin-right: 10px;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .headerButton:hover{
@@ -90,13 +102,10 @@ a:hover{
     color: var(--main-color);
 }
 
-
 .banner{
-  height: 400px;
-  background-image: url(images/SaaSInterface/WhatsApp\ Image\ 2026-09-23\ at\ 08.44.39.jpeg);
-  mask-image: linear-gradient(to bottom, rgba(238,238,238, 1) 70%, rgba(0, 0, 0, 0) 100%);
-  background-size: cover;
+  height: 600px;
 }
+
 .bannerButton{
     border: 1px solid #FF82A9;
     border-radius: 5px; 
@@ -148,6 +157,7 @@ a:hover{
   display: flex;
   flex-direction: row;
   padding-inline: 20px;
+  gap: 20px;
 }
 
 footer{
