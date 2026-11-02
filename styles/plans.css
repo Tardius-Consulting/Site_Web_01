@@ -131,8 +131,6 @@
     flex-flow: column nowrap;
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid #12151e;
-    border-radius: 12px;
     color: #333333;
     background-color: #ffffff;
     overflow-x: auto;
@@ -166,7 +164,9 @@
     font-weight: 600;
     text-align: left;
     padding: 10px 10px;
-    border: 1px solid #12151e;
+    border-top: 1px solid #12151e;
+    border-bottom: 1px solid #12151e;
+    border-left: 1px solid #12151e;
 }
 
 .comparison-plan-type{
@@ -199,7 +199,8 @@
     font-size: 18px; 
     font-weight: bold;
     padding: 15px 15px 15px 15px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .comparison-value-text, .comparison-value-check, .comparison-value-uncheck{
@@ -207,7 +208,8 @@
     justify-content: center;
     align-items: center;
     flex: 1 1 150px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .comparison-value-check::before{
