@@ -2,18 +2,26 @@
   --main-color: #FF82A9;
   --contrast-color:#1A1F2C;
   --write-white:#FFF;
-  --background-white:#EEE;
+  --background-body:#CCC;
   --black-write:#333;
+  --background-content: #FFF;
 }
+
 body{
-    background-color: var(--background-white);
-    color: var(--black-write);
+  background-color: var(--background-body);
+  color: var(--black-write);
 }
+
 *{
   box-sizing: border-box;
   margin: 0px;
   padding: 0;
   font-family: sans-serif;
+}
+
+.main-container{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 header{
@@ -36,6 +44,10 @@ ul{
 
 .navbar-toggler-icon{
   filter: invert(79%) sepia(19%) saturate(7257%) hue-rotate(299deg) brightness(105%) contrast(101%);
+}
+
+.flex-row-1300-900{
+  background-color: var(--background-content);
 }
 
 /*
@@ -89,7 +101,6 @@ a:hover{
 .headerTitle:hover{
     color: var(--main-color);
 }
-
 
 .banner{
   height: 600px;
@@ -146,6 +157,7 @@ a:hover{
   display: flex;
   flex-direction: row;
   padding-inline: 20px;
+  gap: 20px;
 }
 
 footer{
