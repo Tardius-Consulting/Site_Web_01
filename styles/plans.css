@@ -3,6 +3,7 @@
     max-width: 1300px;
     margin: auto;
     font-family: sans-serif;
+    background-color: #ffffff;
 }
 
 .subtitle{
@@ -36,7 +37,6 @@
     border: 1px solid #12151e;
     border-radius: 12px;
     color: #333333;
-    background-color: #ffffff;
 }
 
 .plans-type{
@@ -131,34 +131,43 @@
     flex-flow: column nowrap;
     width: 100%;
     margin-bottom: 20px;
-    border: 1px solid #12151e;
-    border-radius: 12px;
     color: #333333;
-    background-color: #ffffff;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .comparison-table::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-track {
+    width: 100%;
     height: 12px;
+    border-radius: 0px 0px 6px 6px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
 }
 
-.comparison-table::-webkit-scrollbar-track {
-    border-radius: 6px;
-    background: #e0e0e0; 
+.scrollbar-thumb {
+    height: 100%;
+    cursor: pointer;
+    border-radius: 0px 0px 6px 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #888888;
 }
 
-.comparison-table::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    background: #888888; 
-}
-
-.comparison-table::-webkit-scrollbar-thumb:hover {
+.scrollbar-thumb:hover {
     background: #555555;
 }
 
 .comparison-row{
     display: flex;
-    min-width: 800px;
+    min-width: 801px;
 }
 
 .comparison-plan{
@@ -166,7 +175,9 @@
     font-weight: 600;
     text-align: left;
     padding: 10px 10px;
-    border: 1px solid #12151e;
+    border-top: 1px solid #12151e;
+    border-bottom: 1px solid #12151e;
+    border-left: 1px solid #12151e;
 }
 
 .comparison-plan-type{
@@ -199,7 +210,8 @@
     font-size: 18px; 
     font-weight: bold;
     padding: 15px 15px 15px 15px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .comparison-value-text, .comparison-value-check, .comparison-value-uncheck{
@@ -207,7 +219,8 @@
     justify-content: center;
     align-items: center;
     flex: 1 1 150px;
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 }
 
 .comparison-value-check::before{
@@ -227,6 +240,12 @@
     color: #12151e;
     -webkit-text-stroke: 1px #12151e;
 }
+  .bottom-left{
+    border-bottom-left-radius: 12px;
+  }
+  .bottom-right{
+    border-bottom-right-radius: 12px;
+  }
 
 @media (max-width: 1023px)  {
     .plans-container{
@@ -238,4 +257,14 @@
     .plans-plan{
         grid-template-rows: auto auto;
     }
+}
+
+@media (max-width:840px) {
+
+  .bottom-left{
+    border-bottom-left-radius: 0px;
+  }
+  .bottom-right{
+    border-bottom-right-radius: 0px;
+  }
 }
