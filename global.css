@@ -25,7 +25,7 @@ body{
 }
 
 header{
-  background-color: var(--contrast-color);
+  background: linear-gradient(#1A1F2CFF, #1A1F2CBB);
   height: 100vh;
 }
 
@@ -53,6 +53,9 @@ ul{
 
 .flex-row-1300-900{
   background-color: var(--background-content);
+}
+header .flex-row-1300-900{
+  background-color: transparent;
 }
 
 /*
