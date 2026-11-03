@@ -130,7 +130,7 @@
             <li class="plans-topics-explanation-item"><sup>2</sup> O Lotl possui um agente de IA personalizado para auxiliar no planejamento e na elaboração de documentos que podem ser usados para a criação de cards do seu projeto.</li>
         </ul>
         <h2 class="subtitle">Comparação de Planos</h2>
-        <section class="comparison-table">
+        <section class="comparison-table" id="comparison-table-scrollbar">
             <div class="comparison-row">
               <div class="comparison-plan" style="flex: 1 0 200px; display: flex; justify-content: center; align-items: center; border-top-left-radius: 12px;">
                   <img src="../images/mascote/mascote.png" alt="Lotl Logo" style="max-width: 200px;">
@@ -177,6 +177,9 @@
             </div>
           </div>
         </section>
+        <div class="scrollbar-track" id="comparison-table-scrollbar-track">
+            <div class="scrollbar-thumb" id="comparison-table-scrollbar-thumb"></div>
+        </div>
       </main>
     <footer class="row flex-conteiner"> 
       <div class="flex-row-1300-800 justify-content-between align-items-center py-3 my-4 border-top"> 
@@ -203,5 +206,89 @@
       </div> 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const table = document.getElementById("comparison-table-scrollbar");
+            const track = document.getElementById("comparison-table-scrollbar-track");
+            const thumb = document.getElementById("comparison-table-scrollbar-thumb");
+
+            function updateScrollbarSize() {
+                if (table.scrollWidth <= table.clientWidth) {
+                  track.style.display = "none";
+                  return;
+                } 
+                else{
+                  track.style.display = "block";
+                }
+
+                const proportionalwidth = (table.clientWidth / table.scrollWidth) * track.clientWidth;
+                thumb.style.width = Math.max(proportionalwidth, 30) + "px";
+            }
+
+            table.addEventListener("scroll", () => {
+              const maxScrollTable = table.scrollWidth - table.clientWidth;
+              const maxScrollTrack = track.clientWidth - thumb.clientWidth;
+              
+              if (maxScrollTable > 0) {
+                const progress = table.scrollLeft / maxScrollTable;
+                thumb.style.left = progress * maxScrollTrack + "px";
+              }
+            });
+
+            track.addEventListener("click", (e) => {
+                if (e.target === thumb){
+                  return;
+                }  
+
+                const rect = track.getBoundingClientRect();
+                const clickX = e.clientX - rect.left;
+                const thumbwidth = thumb.clientWidth;
+                
+                let newPosition = clickX - (thumbwidth / 2);
+                const maxScrollTrack = track.clientWidth - thumbwidth;
+
+                newPosition = Math.max(0, Math.min(newPosition, maxScrollTrack));
+
+                const progress = newPosition / maxScrollTrack;
+                table.scrollTo({
+                  left: progress * (table.scrollWidth - table.clientWidth),
+                  behavior: 'smooth'
+                });
+            });
+
+            let isDragging = false;
+            let startX, startLeft;
+
+            thumb.addEventListener("mousedown", (e) => {
+              isDragging = true;
+              startX = e.clientX;
+              startLeft = thumb.offsetLeft;
+              document.body.style.userSelect = "none";
+            });
+
+            document.addEventListener("mousemove", (e) => {
+              if (!isDragging){
+                return;
+              }
+
+              const deltaX = e.clientX - startX;
+              const maxScrollTrack = track.clientWidth - thumb.clientWidth;
+              let newPosition = startLeft + deltaX;
+
+              newPosition = Math.max(0, Math.min(newPosition, maxScrollTrack));
+              
+              const progress = newPosition / maxScrollTrack;
+              table.scrollLeft = progress * (table.scrollWidth - table.clientWidth);
+            });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+                document.body.style.userSelect = "auto";
+            });
+
+            updateScrollbarSize();
+            window.addEventListener("resize", updateScrollbarSize);
+        });
+    </script>
   </body>
 </html>

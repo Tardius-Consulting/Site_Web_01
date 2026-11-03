@@ -133,23 +133,35 @@
     margin-bottom: 20px;
     color: #333333;
     overflow-x: auto;
+    scrollbar-width: none;
 }
 
 .comparison-table::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-track {
+    width: 100%;
     height: 12px;
-}
-
-.comparison-table::-webkit-scrollbar-track {
     border-radius: 0px 0px 6px 6px;
-    background: #e0e0e0; 
+    margin-top: -20px;
+    margin-bottom: 20px;
+    background-color: #e0e0e0;
+    position: relative;
+    overflow: hidden;
 }
 
-.comparison-table::-webkit-scrollbar-thumb {
+.scrollbar-thumb {
+    height: 100%;
+    cursor: pointer;
     border-radius: 0px 0px 6px 6px;
-    background: #888888; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #888888;
 }
 
-.comparison-table::-webkit-scrollbar-thumb:hover {
+.scrollbar-thumb:hover {
     background: #555555;
 }
 
