@@ -167,7 +167,7 @@
 
 .comparison-row{
     display: flex;
-    min-width: 800px;
+    min-width: 801px;
 }
 
 .comparison-plan{
@@ -240,6 +240,12 @@
     color: #12151e;
     -webkit-text-stroke: 1px #12151e;
 }
+  .bottom-left{
+    border-bottom-left-radius: 12px;
+  }
+  .bottom-right{
+    border-bottom-right-radius: 12px;
+  }
 
 @media (max-width: 1023px)  {
     .plans-container{
@@ -251,4 +257,14 @@
     .plans-plan{
         grid-template-rows: auto auto;
     }
+}
+
+@media (max-width:840px) {
+
+  .bottom-left{
+    border-bottom-left-radius: 0px;
+  }
+  .bottom-right{
+    border-bottom-right-radius: 0px;
+  }
 }
