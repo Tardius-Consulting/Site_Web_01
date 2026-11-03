@@ -4,6 +4,7 @@
 }
 /*consigurações gerais da imagem principal do sistema*/
 .main-image{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     width: 70%;
     height: auto;
     border-radius: 15px;
@@ -26,6 +27,7 @@
 }
 /*define específicações dos cards*/
 .card{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     width: 320px;
     height: auto;
     border: none;
