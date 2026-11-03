@@ -1,3 +1,9 @@
+header{
+  background: linear-gradient(#1A1F2CFF, #1A1F2CBB), url("../images/about/heroimage.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 .image-conteiner img{
     border-radius: 10px; 
     width: 300px;
@@ -35,4 +41,12 @@ h2{
   .about-info-revert{
     flex-flow: column;
   }
+}
+
+@media (max-width:430px) {
+  header .flex-column, header, header h1, header h2{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
+
 }

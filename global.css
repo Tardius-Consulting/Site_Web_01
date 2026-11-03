@@ -26,6 +26,11 @@ body{
 
 header{
   background-color: var(--contrast-color);
+  height: 100vh;
+}
+
+header .flex-column{
+  height: 100%;
 }
 
 .nav-item{
@@ -103,7 +108,7 @@ a:hover{
 }
 
 .banner{
-  height: 600px;
+  justify-content: space-between;
 }
 
 .bannerButton{
@@ -113,7 +118,7 @@ a:hover{
     background-color: #FF82A9; 
     color: #12151E;
     width: 150px;
-    margin: 5px auto 15px auto;
+    margin: 0 auto 10vh auto;
 }
 
 .bannerButton:hover{
