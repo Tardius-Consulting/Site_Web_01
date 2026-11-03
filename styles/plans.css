@@ -140,12 +140,12 @@
 }
 
 .comparison-table::-webkit-scrollbar-track {
-    border-radius: 6px;
+    border-radius: 0px 0px 6px 6px;
     background: #e0e0e0; 
 }
 
 .comparison-table::-webkit-scrollbar-thumb {
-    border-radius: 6px;
+    border-radius: 0px 0px 6px 6px;
     background: #888888; 
 }
 
