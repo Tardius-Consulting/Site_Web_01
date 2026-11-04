@@ -82,7 +82,7 @@ a:hover{
 .headerButton{
     border-radius: 5px; 
     padding: 5px; 
-    background-color: var(--contrast-color); 
+    background-color: transparent; 
     color: var(--main-color);
     width: 100px;
     margin-right: 10px;
