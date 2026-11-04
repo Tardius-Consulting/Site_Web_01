@@ -115,31 +115,99 @@
                             </div>
                         </div>
                     </div>
-                    <div class="second-div"> <!--aqui estão os cards secundários com imagens e um título referente a função da imagem-->
-                        <div class="card-secondary">
-                            <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 09.02.59.jpeg" class="card-img-top" alt="Imagem do Sistema">
-                            <div class="card-body">
-                                <p class="card-text">Visualização e Comparação com a Documentação</p>
+                    <div class="second-div"> <!--aqui tem o carousel-->
+                        <div id="carouselExample" class="carousel carousel-overlay slide">
+                            <div class="carousel-inner rounded-5"> <!-- imagens do carrocel -->
+                                <div class="carousel-item active">
+                                    <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 09.02.59.jpeg" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 09.03.42.jpeg " class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 07.29.14.jpeg" class="d-block w-100" alt="...">
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-secondary">
-                            <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 07.29.14.jpeg" class="card-img-top" alt="imagem do sistema">
-                            <div class="card-body">
-                                <p class="card-text">Geração de Cards por Documento de Texto e IA</p>
+                            <div class="carousel-overlay-controls">
+                                <div>
+                                    <button style="width: 20px; height: 20px;" class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                                        <span class="carousel-icon-prev" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Anterior</span>
+                                    </button>
+                                    <button style="width: 20px; height: 20px;" class="btn-icon btn-sm btn-subtle theme-secondary" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                                        <span class="carousel-icon-next" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Próximo</span>
+                                    </button>
+                                </div>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
                             </div>
-                        </div>
-                        <div class="card-secondary">
-                            <img src="images/SaaSInterface/WhatsApp Image 2026-09-23 at 09.03.42.jpeg" class="card-img-top" alt="Imagem do Sistema">
-                            <div class="card-body">
-                                <p class="card-text">Acompanhamento e Equilíbrio de Tarefas</p>
-                            </div>
-                        </div>  
+                        </div> 
                     </div>
+                    
                     <div class="second-div"> <!--aqui estão algumas informações do sistema em um pequeno card descritivo-->
+                        <div>
+                            <div class="card">
+                                <h5 class="card-header">Gerar documentação</h5>
+                                <div class="card-body">
+                                    <p class="card-text">Permite escrever a documentação livremente e os cards do Kanban automaticamente a partir do texto ou via IA</p>
+                                    <p class="d-inline-flex gap-1" style="margin-top: 5px;">
+                                        <a class="bannerButton" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Benefício
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="" style="color: var(--write-white);">
+                                            O desenvolvedor ganha agilidade sem precisar criar e editar cards manualmente um por um.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>  
+                            <div class="card">
+                                <h5 class="card-header">Conexão com Documentação</h5>
+                                <div class="card-body">
+                                    <p class="card-text">Conecta os cards diretamente à documentação do jogo para validar o status da implementação.</p>
+                                    <p class="d-inline-flex gap-1" style="margin-top: 5px;">
+                                        <a class="bannerButton" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                                            Benefício
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample2">
+                                        <div class="" style="color: var(--write-white);">
+                                            Clareza para saber exatamente o que já foi feito e o que ainda falta implementar.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>  
+                        <div class="card">
+                                <h5 class="card-header">Monitoramento</h5>
+                                <div class="card-body">
+                                    <p class="card-text">Monitora a distribuição do tempo entre os diferentes pilares do desenvolvimento.</p>
+                                    <p class="d-inline-flex gap-1" style="margin-top: 5px;">
+                                        <a class="bannerButton" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                                            Benefício
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample3">
+                                        <div class="" style="color: var(--write-white);">
+                                            Evita que o dev fique focado demais em apenas uma área ou esqueça tarefas cruciais do projeto.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--    
                         <div class="card">
                             <h5 class="card-header">O que faz: </h5>
                             <div class="card-body">
-                                <p>Permite escrever a documentação livremente e dera os cards do Kanban automaticamente a partir do texto ou via IA</p>
+                                <p>Permite escrever a documentação livremente e os cards do Kanban automaticamente a partir do texto ou via IA</p>
                             </div>
                         </div>
                         <div class="card">
@@ -171,10 +239,10 @@
                             <div class="card-body">
                                 <p>Evita que o dev fique focado demais em apenas uma área ou esqueça tarefas cruciais do projeto.</p>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <div style="margin: 10px 0 15px 0;"> <!--pensar numa estilização para essa seção do site, como um sub-footer ou algo parecido-->
-                            <h2 style="font-size: 44px; margin: 20px 0;">Diferencial Competitivo e Prova Social</h2> <!--estilizar para um título melhor apresentável posteriormente-->
+                            <h2 style="font-size: 44px; margin: 20px 0;">Lolt em uso</h2> <!--estilizar para um título melhor apresentável posteriormente-->
                             <div class="card" style="width: 900px;">
                                 <h5 class="mt-2 mb-0" style="padding: 10px;">Utilização do lotl para criação de clicker simples</h5>
                                 <div class="card-body">
