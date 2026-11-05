@@ -71,6 +71,7 @@
 
 .carrousel-button-container{
     display: flex;
+    padding-left: 30px;
     gap: 10px;
 }
 
