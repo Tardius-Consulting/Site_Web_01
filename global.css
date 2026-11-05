@@ -80,6 +80,7 @@ h1{
 a{
   color: var(--write-white);
   text-decoration: none;
+  transition: color 0.4s;
 }
 
 a:hover{
@@ -94,6 +95,7 @@ a:hover{
     width: 100px;
     margin-right: 10px;
     text-decoration: underline;
+    transition: 0.5s;
 }
 
 .headerButton:hover{
@@ -111,6 +113,7 @@ a:hover{
 .headerTitle{
     color: var(--write-white);
     margin: auto 0 auto 0;
+    transition: color 0.4s;
 }
 
 .headerTitle:hover{
@@ -129,6 +132,7 @@ a:hover{
     color: #12151E;
     width: 150px;
     margin: 0 auto 10vh auto;
+    transition: 0.4s;
 }
 
 .bannerButton:hover{
