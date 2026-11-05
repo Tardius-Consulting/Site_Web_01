@@ -58,6 +58,12 @@ header .flex-row-1300-900{
   background-color: transparent;
 }
 
+header{
+  background: linear-gradient(#1A1F2CFF, #1A1F2CCC), url("./images/about/heroimage.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 /*
 ###########################################
 */

@@ -50,7 +50,7 @@
     align-items: center;
 }
 /*define um botão de flip para o card, as informações de problema/resolução ficariam num mesmo card*/
-.card-button, .bannerButton{
+.card-button, .card-body .bannerButton{
     padding: 5px 7px 5px 7px;
     margin: 0;
 }
