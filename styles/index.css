@@ -1,6 +1,5 @@
-/*vai atuar somente na div pai*/
-.main-div{
-    width: 1300px;
+:root {
+    --card-header: #FF82A955;
 }
 /*consigurações gerais da imagem principal do sistema*/
 .main-image{
@@ -28,11 +27,14 @@
 /*define específicações dos cards*/
 .card{
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.30);
-    width: 320px;
-    height: auto;
+    width: 100%;
+    flex-grow: 1;
     border: none;
     border-radius: 10px;
-    margin: 10px;
+
+}
+.card-header{
+  background-color: var(--card-header);
 }
 .card-secondary{
     width: 380px;
@@ -48,26 +50,46 @@
     align-items: center;
 }
 /*define um botão de flip para o card, as informações de problema/resolução ficariam num mesmo card*/
-.card-button{
+.card-button, .card-body .bannerButton{
     padding: 5px 7px 5px 7px;
-    background-color: #FF82A9;
-    color: var(--write-black);
-    border: none;
-    border-radius: 10px;
+    margin: 0;
 }
 .card-button:hover{
     background-color: #12151E;
-    color: #FF82A9;
+    color: #FFF;
     cursor: pointer;
 }
+
 .card-body{
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: #12151E;
+  align-items: center;
+  justify-content: space-between;
 }
+
 .card-body p{
-    color: var(--write-white);
     text-align: center;
+}
+
+.carrousel-button-container{
+    display: flex;
+    gap: 10px;
+}
+
+.theme-secondary{
+    background-color: var(--card-header);
+    color: var(--write-black);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item p{
+  text-align: justify;
+}
+
+#carouselExample .carousel-item img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 @media (max-width:900px){
@@ -89,5 +111,13 @@
 @media (max-width:440px){
   header h1{
     font-size: 1.8rem;
+  }
+}
+
+@media (max-width:1042px) {
+  .flex-row-1300-900{
+    flex-direction: column;
+    max-width: 800px;
+    margin: 0 auto;
   }
 }

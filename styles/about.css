@@ -1,9 +1,3 @@
-header{
-  background: linear-gradient(#1A1F2CFF, #1A1F2CBB), url("../images/about/heroimage.jpeg");
-  background-size: cover;
-  background-position: center;
-}
-
 .image-conteiner img{
     border-radius: 10px; 
     width: 300px;

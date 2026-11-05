@@ -58,16 +58,23 @@ header .flex-row-1300-900{
   background-color: transparent;
 }
 
+header{
+  background: linear-gradient(to right,#1A1F2C 0%, #1A1F2CBB 50%, #1A1F2C 100%), url("./images/about/heroimage.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
 /*
 ###########################################
 */
 
 h1{
-    font-size: 44px;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: var(--write-white);
+    color: #DDD;
     text-align: center;
     padding: 50px;
+    text-shadow: 1px 1px 4px #000;
 }
 
 a{
