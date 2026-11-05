@@ -87,6 +87,11 @@
   text-align: justify;
 }
 
+#carouselExample .carousel-item img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
 @media (max-width:900px){
   div .flex-row-1300-900 img{
     width: 100vw !important;
