@@ -59,7 +59,7 @@ header .flex-row-1300-900{
 }
 
 header{
-  background: linear-gradient(#1A1F2CFF, #1A1F2CCC), url("./images/about/heroimage.jpeg");
+  background: linear-gradient(to right,#1A1F2C 0%, #1A1F2CBB 50%, #1A1F2C 100%), url("./images/about/heroimage.jpeg");
   background-size: cover;
   background-position: center;
 }
